@@ -186,18 +186,6 @@ Contributions are welcome! To add a new algorithm:
 
 This project is available for academic and research purposes. Please cite appropriately if used in publications.
 
-## Citation
-
-If you use this framework in your research, please cite:
-
-```bibtex
-@software{gaml_framework,
-  title={GAML: Genetic Algorithm Machine Learning Framework for Image Reconstruction},
-  author={[Author Names]},
-  year={2025},
-  url={https://github.com/[repository]}
-}
-```
 
 ## Troubleshooting
 
