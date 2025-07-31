@@ -2,30 +2,12 @@
 
 The project implements various optimization algorithms to recreate reference images using colored polygons.
 
-## Citation
-
 If you use GAML in your research, please cite the following paper:
 
 Machine Learning and Genetic Algorithms: A case study on image reconstruction
 http://dx.doi.org/10.1016/j.knosys.2023.111194
 
-```bibtex
 
-@article{gaml2024,
-  title = {Machine Learning and Genetic Algorithms: A case study on image reconstruction},
-  volume = {284},
-  ISSN = {0950-7051},
-  url = {http://dx.doi.org/10.1016/j.knosys.2023.111194},
-  DOI = {10.1016/j.knosys.2023.111194},
-  journal = {Knowledge-Based Systems},
-  publisher = {Elsevier BV},
-  author = {Cavallaro,  Claudia and Cutello,  Vincenzo and Pavone,  Mario and Zito,  Francesco},
-  year = {2024},
-  month = jan,
-  pages = {111194}
-}
-
-```
 
 ## Project Structure
 
