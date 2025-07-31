@@ -1,37 +1,30 @@
-# GAML - Genetic Algorithm Machine Learning Framework
+# GAML - Genetic Algorithm with Machine Learning
 
-A Python framework for image reconstruction using metaheuristic optimization algorithms. The project implements various optimization algorithms to recreate reference images using colored polygons.
+The project implements various optimization algorithms to recreate reference images using colored polygons.
 
-## Overview
+## Citation
 
-GAML (Genetic Algorithm Machine Learning) is a research framework that applies evolutionary computation and other metaheuristic algorithms to solve the image reconstruction problem. The system attempts to recreate target images by evolving a collection of semi-transparent polygons with optimized positions, colors, and transparency values.
+If you use GAML in your research, please cite the following paper:
 
-## Features
+Machine Learning and Genetic Algorithms: A case study on image reconstruction
+http://dx.doi.org/10.1016/j.knosys.2023.111194
 
-### Implemented Algorithms
+```bibtex
 
-- **GA** - Genetic Algorithm with elitism
-- **GAML** - Genetic Algorithm with Machine Learning (dynamic parameter adaptation)
-- **ILS** - Iterated Local Search
-- **TS** - Tabu Search
-- **AIS** - Artificial Immune System (Clonal Selection Algorithm)
+@article{gaml2024,
+  title = {Machine Learning and Genetic Algorithms: A case study on image reconstruction},
+  volume = {284},
+  ISSN = {0950-7051},
+  url = {http://dx.doi.org/10.1016/j.knosys.2023.111194},
+  DOI = {10.1016/j.knosys.2023.111194},
+  journal = {Knowledge-Based Systems},
+  publisher = {Elsevier BV},
+  author = {Cavallaro,  Claudia and Cutello,  Vincenzo and Pavone,  Mario and Zito,  Francesco},
+  year = {2024},
+  month = jan,
+  pages = {111194}
+}
 
-### Image Quality Metrics
-
-- **MSE** - Mean Squared Error
-- **SSIM** - Structural Similarity Index
-- **PSNR** - Peak Signal-to-Noise Ratio
-- **LOSS** - Custom loss function
-- **CP** - Custom performance metric
-
-### Dynamic Parameter Adaptation
-
-The ML variants (GAML, ILSML) feature adaptive parameter control that automatically adjusts algorithm parameters based on search progress using trend analysis.
-
-## Requirements
-
-```bash
-pip install Pillow numpy scikit-image opencv-python matplotlib deap sewar
 ```
 
 ## Project Structure
@@ -154,59 +147,3 @@ For each processed image, the framework generates:
 - **statistic.txt**: Detailed execution statistics
 - **inputs.txt**: Algorithm configuration used
 - **dynamic_log.txt**: Dynamic parameter changes (ML variants only)
-
-## Research Applications
-
-This framework is designed for:
-
-- Evolutionary art and computational creativity research
-- Metaheuristic algorithm comparison studies
-- Dynamic parameter adaptation research
-- Image approximation and compression studies
-- Multi-objective optimization research
-
-## Integration with irace
-
-The framework supports integration with the irace package for automatic algorithm configuration:
-
-```bash
-python src/main.py -a GAML -d ./images -o ./results -t irace_output.txt -n run_001
-```
-
-## Contributing
-
-Contributions are welcome! To add a new algorithm:
-
-1. Create a new file following the naming convention (e.g., `NEWNAME.py`)
-2. Implement `NEWNAMEConfig` inheriting from `AlgorithmConfigBase`
-3. Implement `NEWNAME` inheriting from `AlgorithmBase`
-4. Implement the `executive()` method with your algorithm logic
-
-## License
-
-This project is available for academic and research purposes. Please cite appropriately if used in publications.
-
-
-## Troubleshooting
-
-### Common Issues
-
-1. **ModuleNotFoundError**: Ensure all dependencies are installed
-
-   ```bash
-   pip install Pillow numpy scikit-image opencv-python matplotlib deap sewar
-   ```
-2. **Memory Issues**: Reduce `population_size` or `number_of_polygon` for large images
-3. **Slow Performance**: Consider using smaller images or reducing `max_generation`
-4. **No Output Images**: Check that the output directory has write permissions
-
-### Performance Tips
-
-- Use SSIM metric for better perceptual quality
-- Start with smaller polygon counts (50-100) for faster convergence
-- Use ML variants (GAML, ILSML) for better parameter adaptation
-- Enable verbose mode (`-v`) to monitor progress
-
-## Contact
-
-For questions, issues, or contributions, please open an issue in the repository or contact the maintainers.
